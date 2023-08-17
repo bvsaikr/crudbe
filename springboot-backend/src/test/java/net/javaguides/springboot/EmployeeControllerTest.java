@@ -30,7 +30,7 @@ public class EmployeeControllerTest {
 	private MockMvc mockMvc;
 	
 	@Test
-	private void createEmployeeTest() throws Exception {
+	public void createEmployeeTest() throws Exception {
      
 		Employee employee = new Employee();
 		employee.setId(1);
