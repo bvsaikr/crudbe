@@ -19,7 +19,7 @@ import net.javaguides.springboot.controller.EmployeeController;
 import net.javaguides.springboot.model.Employee;
 
 @WebMvcTest(value = EmployeeController.class)
-private class EmployeeControllerTest {
+public class EmployeeControllerTest {
 	
 	private static final Object SUCCESS = " ";
 
