@@ -19,7 +19,7 @@ import net.javaguides.springboot.controller.EmployeeController;
 import net.javaguides.springboot.model.Employee;
 
 @WebMvcTest(value = EmployeeController.class)
-public class EmployeeControllerTest {
+private class EmployeeControllerTest {
 	
 	private static final Object SUCCESS = " ";
 
@@ -30,7 +30,7 @@ public class EmployeeControllerTest {
 	private MockMvc mockMvc;
 	
 	@Test
-	public void createEmployeeTest() throws Exception {
+	private void createEmployeeTest() throws Exception {
      
 		Employee employee = new Employee();
 		employee.setId(1);
