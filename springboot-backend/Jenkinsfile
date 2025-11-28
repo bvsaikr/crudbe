@@ -18,7 +18,7 @@ pipeline{
         }
         stage("build"){
             steps{
-                withEnv(['PATH+DOCKER=/usr/bin']) { // Adjust path if Docker is elsewhere
+                dir("springboot-backend"){
                         sh 'docker build -t crudbe:1.0 .'
                     }
             }
