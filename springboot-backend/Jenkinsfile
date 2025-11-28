@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("clone"){
             steps{
-                git url: "https://github.com/bvsaikr/crudbe.git", branch: "master"
+                git url: "https://github.com/bvsaikr/crudbe.git", branch: "main"
             }
         }
         stage("package"){
