@@ -1,0 +1,26 @@
+pipeline{
+    agent {label 'mynode'}
+    tools{
+        maven "Maven"
+    }
+    stages{
+        stage("clone"){
+            steps{
+                git url: "https://github.com/bvsaikr/crudbe.git", branch: "master"
+            }
+        }
+        stage("package"){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+        stage("build"){
+            steps{
+                withEnv(['PATH+DOCKER=/usr/bin']) { // Adjust path if Docker is elsewhere
+                        sh 'docker build -t crudbe:1.0 .'
+                    }
+            }
+        }
+    }
+}
+
