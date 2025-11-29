@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 WORKDIR /app
 COPY ./target/springboot-backend-0.0.1-SNAPSHOT.jar /app/
 RUN apt-get update && \
