@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM openjdk:11-jre-slim
 WORKDIR /app
 COPY ./target/springboot-backend-0.0.1-SNAPSHOT.jar /app/
 RUN apt-get update && \
